@@ -1,10 +1,17 @@
 import { TestBed } from '@angular/core/testing';
 import { AppComponent } from './app.component';
+import { CafesListarComponent } from './cafes/cafes-listar/cafes-listar.component';
+import { HttpClientModule } from '@angular/common/http';
 
 describe('AppComponent', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [AppComponent],
+      imports: [
+        HttpClientModule
+      ],
+      declarations: [
+        AppComponent, CafesListarComponent
+      ],
     }).compileComponents();
   });
 
@@ -14,16 +21,9 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   });
 
-  it(`should have the 'evaluacion-practica-angular' title`, () => {
+  it(`should have the 'MISO - Evaluación Práctica Angular' title`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
-    expect(app.title).toEqual('evaluacion-practica-angular');
-  });
-
-  it('should render title', () => {
-    const fixture = TestBed.createComponent(AppComponent);
-    fixture.detectChanges();
-    const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('h1')?.textContent).toContain('Hello, evaluacion-practica-angular');
+    expect(app.title).toEqual('MISO - Evaluación Práctica Angular');
   });
 });

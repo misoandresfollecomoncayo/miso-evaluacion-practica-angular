@@ -1,0 +1,4 @@
+.tabla-personalizada > thead > tr > th {
+    background-color: #333a40;
+    color: white;
+}

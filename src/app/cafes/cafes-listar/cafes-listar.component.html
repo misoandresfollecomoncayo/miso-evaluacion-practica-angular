@@ -1,0 +1,37 @@
+<div class="container col-12">
+  <h2 style="border-bottom: 1px solid rgba(0,0,0,.1); padding: 10px 0;">
+    El aroma mágico
+  </h2>
+  
+  <div style="width: 100%; height: 250px; margin-top: 20px; background-image: url(assets/img/cafe-background.png); background-position: center; background-repeat: no-repeat; background-size: cover;"></div>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-8 text-start">
+        <table class="table tabla-personalizada" style="margin-top: 20px">
+          <thead>
+            <tr>
+              <th>#</th>
+              <th>Nombre</th>
+              <th>Tipo</th>
+              <th>Región</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let cafe of cafes">
+              <td><b>{{ cafe.id }}</b></td>
+              <td>{{ cafe.nombre }}</td>
+              <td>{{ cafe.tipo }}</td>
+              <td>{{ cafe.region }}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <div style="margin-top: 20px">Total café de origen: {{ getTotalCafeOrigen() }}</div>
+  <div>Total café blend: {{ getTotalCafeBlend() }}</div>
+
+  <div style="text-align: center; font-size: 13px; margin-top: 50px;">Contact us: +57 3102105253 - info&#64;elaromamagico.com - &#64;elaromamagico</div>
+</div>
